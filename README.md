@@ -25,6 +25,10 @@ I completed my undergraduate in Physics at the University of Dhaka, Bangladesh i
 I am currently working on the mass distributions of neutron stars in different binary systems and constraining the equation of state of dense matter. This work is supported by the National Science Foundation.
 
 
+## Curriculum Vitae
+Click [here](./cv.pdf) or visit [https://anikmh.github.io/cv.pdf](https://github.com/anikmh/anikmh.github.io/blob/main/cv.pdf).
+
+
 ## Office
 
 South College 107A <br>
@@ -38,9 +42,6 @@ Knoxville, TN 37996
 1408 Circle Drive <br> 
 Knoxville TN 37996-1200 <br>
 Phone: (865) 974-3342
-
-## Curriculum Vitae
-Click [here](./cv.pdf) or visit [https://anikmh.github.io/cv.pdf](https://github.com/anikmh/anikmh.github.io/blob/main/cv.pdf).
 
 
 ## Contact
