@@ -1,5 +1,9 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-# Mahmudul Hasan Anik
+layout: home
+---
 
 <p> 
 Graduate Research Assistant <br>
@@ -11,9 +15,7 @@ Knoxville, Tennessee, USA
 
 ## Research
 
-Theoretical and computational
-- Astrophysics
-- Nuclear Physics
+Theoretical and computational nuclear astrophysics
 
 
 ## Brief Bio
@@ -47,4 +49,3 @@ Phone: (865) 974-3342
 ## Contact
 
 Email: [anik@tennessee.edu](mailto:anik@tennessee.edu) <br>
-Phone: (865) 974-8641
