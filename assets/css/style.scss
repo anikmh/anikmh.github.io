@@ -1,18 +1,135 @@
----
----
+/* Overall page grid */
+.layout {
+    display: grid;
+    grid-template-columns: 180px 1fr 250px;
+    gap: 40px;
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-@import "jekyll-theme-primer";
+/* LEFT SIDEBAR (Navigation) */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: sticky;
+    top: 20px;
+}
 
-/* Dark mode styles */
+.nav-item {
+    padding: 10px 14px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #c9d1d9;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    background-color: #333;
+    border-color: #666;
+}
+
+/* CENTER COLUMN */
+.main-content {
+    max-width: 750px;
+}
+
+/* RIGHT COLUMN (Profile Picture) */
+.rightbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: sticky;
+    top: 20px;
+}
+
+/* Profile picture */
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #888;
+}
+
+/* Quick Links header */
+.quick-links-header {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    color: #e2e2e2;
+}
+
+/* Quick Links container */
+.profile-links {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Quick Links – each link line */
+.profile-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #8ab4ff;
+    text-decoration: none;
+}
+
+.profile-links a:hover {
+    color: #c8d8ff;
+    text-decoration: underline;
+}
+
+/* Icon styling */
+.icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Global layout */
 body {
-    background-color: #0d1117; /* Dark background */
-    color: #c9d1d9;          /* Light text */
+    margin: 0;
+    padding: 0;
+    background: #0d1117 url("../images/background/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #c9d1d9;
+    font-family: sans-serif;
+    line-height: 1.6;
 }
 
+/* For consistency: adjust link styles globally */
 a {
-    color: #58a6ff;          /* Link color */
+    color: #8ab4ff;
+    text-decoration: none;
 }
 
-header, footer {
-    background-color: #161b22; /* Slightly lighter dark */
+a:hover {
+    color: #c8d8ff;
+    text-decoration: underline;
+}
+
+/* Responsive collapse for mobile/tablets */
+@media (max-width: 900px) {
+
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .rightbar {
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
 }
