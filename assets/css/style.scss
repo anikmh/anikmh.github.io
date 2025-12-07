@@ -99,27 +99,21 @@
 body {
     margin: 0;
     padding: 0;
-    background: #0d1117 url("../images/background/bg.jpg") no-repeat center center fixed;
+
+    /* Background image + 95% dark overlay */
+    background: linear-gradient(
+                    rgba(0, 0, 0, 0.95),
+                    rgba(0, 0, 0, 0.95)
+                ),
+                url("../images/background/bg.jpg") no-repeat center center fixed;
+
     background-size: cover;
+
     color: #c9d1d9;
     font-family: sans-serif;
     line-height: 1.6;
-    position: relative;
-    z-index: 0;
 }
 
-/* Dark overlay */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    pointer-events: none;
-    z-index: -1;
-}
 
 /* For consistency: adjust link styles globally */
 a {
