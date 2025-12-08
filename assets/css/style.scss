@@ -9,7 +9,19 @@
     width: 90%;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px;   /* outer padding around grid */
+}
+
+/* Ensure all three columns (sidebar, main, rightbar) align at the top */
+.layout > * {
+    align-self: start !important;
+}
+
+/* Aesthetic internal top padding for all columns */
+.sidebar,
+.main-content,
+.rightbar {
+    padding-top: 12px;   /* visually balanced spacing */
 }
 
 /* LEFT SIDEBAR (Navigation) */
@@ -18,6 +30,12 @@
     flex-direction: column;
     gap: 12px;
     position: static;
+}
+
+/* Remove accidental top spacing on first element */
+.sidebar > *:first-child {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
 
 .nav-item {
@@ -38,7 +56,13 @@
     max-width: 750px;
 }
 
-/* RIGHT COLUMN (Profile Picture) */
+/* Remove default top margin on <h1> */
+.main-content > *:first-child {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* RIGHT COLUMN (Profile Picture + Links) */
 .rightbar {
     display: flex;
     flex-direction: column;
@@ -47,33 +71,43 @@
     position: static;
 }
 
+/* Ensure first element (profile image) starts flush at the top */
+.rightbar > *:first-child {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
 /* Profile picture */
 .profile-pic {
-    width: 220px;    /* larger profile picture */
+    width: 220px;
     height: 220px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #888;
+
+    /* Remove browser/Primer default image spacing */
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    display: block;
 }
 
 /* Quick Links header */
 .quick-links-header {
-    margin-top: 60px;     /* push Quick Links downward */
+    margin-top: 60px;     /* intentional visual spacing before links */
     margin-bottom: 10px;
     font-weight: normal;
     color: #e2e2e2;
-    text-align: left;     /* ensure left alignment */
+    text-align: left;
 }
 
 /* Quick Links container */
 .profile-links {
-    margin-top: 20px;     /* extra spacing below header */
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-/* Quick Links – each link line */
 .profile-links a {
     display: flex;
     align-items: center;
@@ -99,7 +133,6 @@ body {
     margin: 0;
     padding: 0;
 
-    /* Background image + 95% dark overlay */
     background: linear-gradient(
                     rgba(0, 0, 0, 0.9),
                     rgba(0, 0, 0, 0.9)
@@ -113,7 +146,7 @@ body {
     line-height: 1.6;
 }
 
-/* For consistency: adjust link styles globally */
+/* Global link styles */
 a {
     color: #8ab4ff;
     text-decoration: none;
@@ -140,6 +173,6 @@ a:hover {
     .rightbar {
         justify-content: center;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 20px;   /* intentional for mobile layout */
     }
 }
