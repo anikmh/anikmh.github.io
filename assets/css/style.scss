@@ -1,27 +1,12 @@
----
----
 
 /* Overall page grid */
 .layout {
     display: grid;
-    grid-template-columns: 180px 1fr 260px;
+    grid-template-columns: 150px 760px 240px;
     gap: 40px;
     width: 90%;
     max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px;   /* outer padding around grid */
-}
-
-/* Ensure all three columns (sidebar, main, rightbar) align at the top */
-.layout > * {
-    align-self: start !important;
-}
-
-/* Aesthetic internal top padding for all columns */
-.sidebar,
-.main-content,
-.rightbar {
-    padding-top: 12px;   /* visually balanced spacing */
+    margin: auto auto;
 }
 
 /* LEFT SIDEBAR (Navigation) */
@@ -30,12 +15,7 @@
     flex-direction: column;
     gap: 12px;
     position: static;
-}
-
-/* Remove accidental top spacing on first element */
-.sidebar > *:first-child {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
+    margin-top: 30px;
 }
 
 .nav-item {
@@ -56,12 +36,6 @@
     max-width: 750px;
 }
 
-/* Remove default top margin on <h1> */
-.main-content > *:first-child {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-}
-
 /* RIGHT COLUMN (Profile Picture + Links) */
 .rightbar {
     display: flex;
@@ -69,12 +43,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     position: static;
-}
-
-/* Ensure first element (profile image) starts flush at the top */
-.rightbar > *:first-child {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
+    margin-top: 30px;
 }
 
 /* Profile picture */
@@ -84,10 +53,6 @@
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #888;
-
-    /* Remove browser/Primer default image spacing */
-    margin-top: 0 !important;
-    padding-top: 0 !important;
     display: block;
 }
 
@@ -130,17 +95,11 @@
 
 /* Global layout */
 body {
-    margin: 0;
-    padding: 0;
-
     background: linear-gradient(
-                    rgba(0, 0, 0, 0.9),
-                    rgba(0, 0, 0, 0.9)
-                ),
+                    rgba(0, 0, 0, 0.8),
+                    rgba(0, 0, 0, 0.8)),
                 url("../images/background/bg.jpg") no-repeat center center fixed;
-
     background-size: cover;
-
     color: #c9d1d9;
     font-family: sans-serif;
     line-height: 1.6;
@@ -175,4 +134,20 @@ a:hover {
         align-items: center;
         margin-top: 20px;   /* intentional for mobile layout */
     }
+}
+
+h1::after,
+h2::after,
+h3::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: #444;
+    margin-top: 0.25em;
+}
+h1 { color: #c084fc; }
+h2 { color: #3b82f6; }
+h3 { color: #818cf8; }
+.quick-links-header {
+    color: #818cf8;   /* or any color you want */
 }
