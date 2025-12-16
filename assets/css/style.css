@@ -3,9 +3,9 @@
   display: grid;
   grid-template-columns: 150px 760px 240px;
   gap: 40px;
-  width: 90%;
-  max-width: 1400px;
-  margin: auto auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 /* LEFT SIDEBAR (Navigation) */
